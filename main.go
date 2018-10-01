@@ -9,7 +9,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-const version = "1.0"
+const version = "1.1"
 
 func main() {
 	logger := log.New(os.Stderr, "", log.Lshortfile)
