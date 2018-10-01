@@ -39,6 +39,7 @@ func run(cfg Config) {
 		Password:          cfg.ApiPassword,
 		SkipSslValidation: cfg.SkipSslValidation,
 		HttpClient:        &http.Client{Timeout: 10 * time.Second},
+		UserAgent:         "SimpleAutoscaler/"+version,
 	})
 	if err != nil {
 		cfg.Logger.Fatal(errors.Wrap(err, "create cf client"))
